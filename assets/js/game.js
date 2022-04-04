@@ -168,10 +168,22 @@ var randomNumber = function(min, max) {
   /* END GAME FUNCTIONS */
   
   /* GAME INFORMATION / VARIABLES */
+
+  // function to set name
+  var getPlayerName = function() {
+    var name = "";
+
+    while (name === "" || name === null) {
+      name = prompt("What is your robot's name?");
+    }
+
+    console.log("Your robot's name is " + name);
+    return name;
+  };
   
   // player information
   var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
